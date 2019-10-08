@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px 0;
+  background: #6589F9;
+}
+
+.grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#instructions {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgba(205,205,205,.4);
+    padding: 20px;
+    z-index: 1;
+}
+
+#instructions h1 {
+    color: #6589f9;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0 10px 0;
+    font-family: sans-serif;
+}
+
+#instructions h1 strong{
+    text-transform: uppercase;
+    letter-spacing:4px;
+    color: #fab942;
+    text-shadow: 0px 1px 0px #b8b8b8
+}
+
+#instructions h1 span {
+    font-size: 22px;
+}
+
+#instructions ol {
+    line-height: 25px;
+    font-family: sans-serif;
+}
+
+button#ready, button#playAgain  {
+    background: #6589f9;
+    color: #fff;
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    margin: 15px auto;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back, 
+.front {
+  height: 150px;
+  width: 150px;
+
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: #FAB942 /*url('../img/question.gif')*/ no-repeat center center / contain;
+}
+
+.back{
+  transform: rotateY(180deg);
+  background-color: #6589f9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front{
+  background: #6589F9 !important;
+}
+
+#result {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px 2px rgba(205,205,205,.4);
+    z-index: 2;
+}
+
+#result > * {
+    width: 100%;
+}
+
+#result h1 {
+    color: #6589f9;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+#result p {
+    color: #2a2b2d;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 25px 0 30px 0;
+}
+
+#overlay, #overlayInst {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
